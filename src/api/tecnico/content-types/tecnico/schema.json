@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tecnicos",
+  "info": {
+    "singularName": "tecnico",
+    "pluralName": "tecnicos",
+    "displayName": "Tecnicos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Alias": {
+      "type": "string"
+    },
+    "FechaAlta": {
+      "type": "date"
+    },
+    "Activo": {
+      "type": "boolean"
+    },
+    "ID_Tecnico": {
+      "type": "uid"
+    },
+    "base": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::base.base",
+      "inversedBy": "tecnicos"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
